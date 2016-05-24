@@ -1,0 +1,16 @@
+<zk xmlns:n="http://www.w3.org/1999/xhtml">
+	<borderlayout sclass="inner-border" >
+		<center border="0" margins="0,3,3,3">
+			<tabbox id="mainTBox" vflex="1">
+				<tabs id="mainTabs">
+					<tab label="home" id="homeTab" />
+				</tabs>
+				<tabpanels id="mainTPanels">
+					<tabpanel style="overflow: auto">
+						<label value="stuff here"/>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</center>
+	</borderlayout>
+</zk>

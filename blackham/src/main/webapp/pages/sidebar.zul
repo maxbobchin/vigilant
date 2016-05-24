@@ -1,0 +1,50 @@
+<zk>
+	<vlayout spacing="0">
+		<div height="15px" />
+		<div >
+			<panel width="100%" border="normal" title="Action Menu">
+				<panelchildren style="padding:5px;">				
+					<menubar id="menubar" orient="vertical" autodrop="true" style="background-color:white; border:0px">						
+						<menuitem label="Test item 1"  />
+						<menuitem label="Test item 2"  />
+						<menuitem label="Test item 3"  />
+						<menuitem label="Test item 4"  />						
+						<menu label="Test item 5" >
+							<menupopup>
+								<menuitem label="Test item 6"  />
+								<menuitem label="Test item 7"  />
+								<menuitem label="Test item 8"  />
+							</menupopup>
+						</menu>	
+					</menubar>
+					<separator orient="horizontal" bar="true" />	
+					<label value="contexual items here"/>				
+					<!-- template name="contextControl">
+						<toolbarbutton id="updateDoc" label="Contextual Item 1"
+							disabled="true" />
+					</template-->
+				</panelchildren>
+			</panel>
+		</div>
+		<div height="15px"></div>
+		<panel width="100%" height="375px" border="normal"
+			title="Other Information">
+			<panelchildren style="padding:5px;">
+				<vbox id="currEvents" vflex="1">
+					<div>
+						<vlayout vflex="1">
+							<listbox vflex="1" hflex="1">
+								<listhead sizable="true">
+									<listheader />
+								</listhead>
+									<listitem label="item 1"/>
+									<listitem label="item 2"/>
+									<listitem label="item 3"/>
+							</listbox>
+						</vlayout>
+					</div>
+				</vbox>
+			</panelchildren>
+		</panel>
+	</vlayout>
+</zk>
