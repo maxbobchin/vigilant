@@ -86,6 +86,10 @@
 						<allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
 					</webAppConfig>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
+					<connectors>
+				      <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+				      </connector>
+				     </connectors>
 					<stopPort>9999</stopPort>
        				<stopKey>blackham</stopKey>
 				</configuration>
