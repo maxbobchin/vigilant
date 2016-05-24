@@ -88,6 +88,7 @@
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<connectors>
 				      <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+				       <port>80</port>
 				      </connector>
 				     </connectors>
 					<stopPort>9999</stopPort>
