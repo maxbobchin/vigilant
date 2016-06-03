@@ -1,0 +1,5 @@
+<zk>
+	<spreadsheet src="/spreadsheets/test.xlsx"
+     vflex="1" hflex="1" maxVisibleRows="150" maxVisibleColumns="40"
+     showToolbar="true" showSheetbar="true" showFormulabar="true"/>
+</zk>

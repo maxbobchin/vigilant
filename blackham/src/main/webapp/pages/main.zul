@@ -2,39 +2,20 @@
 <?link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"?>
 <?link rel="icon" type="image/x-icon" href="/img/favicon.ico"?>
 <?page title="vigilant"?> 
-<window id="win"  vflex="1" apply="org.zkoss.bind.BindComposer" viewModel="@id('mvm') @init('com.vigilant.blackham.MainViewModel')">
-	<style>
-		.breeze .complex-layout, .breeze .complex-layout .z-south,
-		.breeze .complex-layout .z-west { background: #F7F7F7; }
-		.z-borderlayout { background: #FFFFFF } .complex-layout .z-north
-		{
-		background: #008BB6;} img.complex-layout-header-img {
-		padding: 0 10px;
-		} .complex-layout-header-label { position:
-		relative;
-		padding-left: 40px; font-size: 50px;
-		color: White; font-weight: bold; }
-		.inner-border, .inner-border
-		.z-north, .inner-border .z-west,
-		.inner-border .z-south,
-		.inner-border .z-east { background: #FFFFFF; }
-		.dl-link {
-		text-decoration: none; cursor: pointer; }
-		.header-image {background-image:url("img/alpine_banner_extend.jpg");}
-	</style>
-	<div vflex="1">
+<window id="win"  vflex="1" >	
+	<div vflex="1" apply="org.zkoss.bind.BindComposer" viewModel="@id('mvm') @init('com.vigilant.blackham.MainViewModel', workspace=workspace)">
 		<borderlayout sclass="complex-layout" >
 			<!-- header -->  
 			<north size="90px" border="0" collapsible="true" splittable="true"> 
 				<include src="header.zul" />
 			</north>
 			<!-- sidebar -->
-			<west id="west" width="200px" border="0" flex="true" splittable="true" collapsible="true"				margins="0,5,0,0">
+			<west id="west" width="200px" border="0" flex="true" splittable="true" collapsible="true" margins="0,5,0,0">
 				<include id="sidebar" src="sidebar.zul"  />
 			</west>
 			<!-- workspace -->
 			<center id="center" autoscroll="true">
-				<include id="workspace" src="workspace.zul" />
+				<include id="workspace" src="@load(mvm.workspacePage)" />
 			</center>
 			<!-- footer -->
 			<south size="40px" border="0"

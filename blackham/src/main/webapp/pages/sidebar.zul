@@ -5,10 +5,11 @@
 			<panel width="100%" border="normal" title="Action Menu">
 				<panelchildren style="padding:5px;">				
 					<menubar id="menubar" orient="vertical" autodrop="true" style="background-color:white; border:0px">						
-						<menuitem label="Test item 1"  />
-						<menuitem label="Test item 2"  />
-						<menuitem label="Test item 3"  />
-						<menuitem label="Test item 4"  />						
+						<menuitem label="workspace page"  onClick="@command('changePage',page='workspace.zul')" />
+						<menuitem label="Test item 1"  onClick="@command('changePage',page='test/test1.zul')" />
+						<menuitem label="Test item 2"  onClick="@command('changePage',page='test/test2.zul')" />
+						<menuitem label="Test item 3"  onClick="@command('changePage',page='test/test3.zul')" />
+						<menuitem label="Test item 4"  onClick="@command('changePage',page='test/test4.zul')" />						
 						<menu label="Test item 5" >
 							<menupopup>
 								<menuitem label="Test item 6"  />

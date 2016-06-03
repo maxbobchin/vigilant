@@ -5,7 +5,9 @@
 	<artifactId>blackham</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<zk.version>8.0.0-Eval</zk.version>
+		<zk.version>7.0.2</zk.version>
+		<zss.version>3.5.0</zss.version>
+<!-- 		<slf4jVersion>1.6.1</slf4jVersion> -->
 		<commons-io>2.4</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
@@ -26,11 +28,11 @@
 			<name>ZK CE Repository</name>
 			<url>http://mavensync.zkoss.org/maven2</url>
 		</repository>
-		<repository>
-			<id>ZK EVAL</id>
-      		<name>ZK Evaluation Repository</name>
-			<url>http://mavensync.zkoss.org/eval</url>
-		</repository>
+<!-- 		<repository> -->
+<!-- 			<id>ZK EVAL</id> -->
+<!--       		<name>ZK Evaluation Repository</name> -->
+<!-- 			<url>http://mavensync.zkoss.org/eval</url> -->
+<!-- 		</repository> -->
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -40,21 +42,26 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.slf4j</groupId> -->
+<!-- 			<artifactId>slf4j-api</artifactId> -->
+<!-- 			<version>${slf4jVersion}</version> -->
+<!-- 		</dependency> -->		
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkmax</artifactId>
-			<version>${zk.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zuti</artifactId>
-			<version>${zk.version}</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.zkoss.zk</groupId> -->
+<!-- 			<artifactId>zkmax</artifactId> -->
+<!-- 			<version>${zk.version}</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.zkoss.zk</groupId> -->
+<!-- 			<artifactId>zuti</artifactId> -->
+<!-- 			<version>${zk.version}</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkplus</artifactId>
@@ -65,11 +72,14 @@
 			<artifactId>zhtml</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
-		
+		<dependency>
+		    <groupId>org.zkoss.zss</groupId>
+		    <artifactId>zss</artifactId>
+		    <version>${zss.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>${commons-io}</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -134,4 +144,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
